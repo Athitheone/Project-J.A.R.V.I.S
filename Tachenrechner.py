@@ -1,30 +1,34 @@
+def taschenrechner(a, b, operation):
+    if operation == "+":
+        return a + b
+    elif operation == "-":
+        return a - b
+    elif operation == "*":
+        return a * b
+    elif operation == "/":
+        if b == 0:
+            return "Fehler: Division durch 0!"
+        return a / b
+    elif operation == "**":
+        return a ** b
+    elif operation == "%":
+        return a % b
+    else:
+        return "Ungültige Operation!"
+
 while True:
+    op = input("Welche Operation möchtest du ausführen? (+, -, *, / ,** ,%) oder exit:")
+    if op.lower() == 'exit':
+        print('Code wird beendet!')
+        break
     try:
+        # Testen der Funktion
         zahl1 = float(input("Gib die erste Zahl ein: "))
         zahl2 = float(input("Gib die zweite Zahl ein: "))
-    except ValueError:  # Falls der Benutzer Text eingibt statt einer Zahl
-        print("Fehler: Bitte gib gültige Zahlen ein!")
-        continue  # Springt zurück zum Start der Schleife
+    except ValueError:
+        print("Erneut versuchen!")
+        continue
 
-    operator = input("Wähle eine Rechenart (+, -, *, /) oder 'exit' zum Beenden: ")
 
-    if operator == "exit":
-        print("Taschenrechner wird beendet. Auf Wiedersehen!")
-        break
-
-    if operator == "+":
-        ergebnis = zahl1 + zahl2
-    elif operator == "-":
-        ergebnis = zahl1 - zahl2
-    elif operator == "*":
-        ergebnis = zahl1 * zahl2
-    elif operator == "/":
-        if zahl2 != 0:
-            ergebnis = zahl1 / zahl2
-        else:
-            ergebnis = "Fehler: Division durch Null ist nicht erlaubt!"
-    else:
-        ergebnis = "Ungültiger Operator!"
-
+    ergebnis = taschenrechner(zahl1, zahl2, op)
     print("Ergebnis:", ergebnis)
-
