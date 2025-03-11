@@ -33,7 +33,12 @@ while True:
     ergebnis = taschenrechner(zahl1, zahl2, op)
     print("Ergebnis:", ergebnis)
 
-    input("Willst du weiter machen?: ")
+    weiter = input("Willst du weiter machen?: ")
+        
+    if weiter == "ja".lower:
+        input(op)
+        input(zahl2)
+    elif weiter == "nein".lower:
+        continue
 
-    if 
-
+    
