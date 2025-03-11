@@ -15,8 +15,8 @@ def taschenrechner(a, b, operation):
         return a % b
     else:
         return "Ungültige Operation!"
-
-while True:
+weiter= True
+while weiter:
     op = input("Welche Operation möchtest du ausführen? (+, -, *, / ,** ,%) oder exit:")
     if op.lower() == 'exit':
         print('Code wird beendet!')
@@ -32,13 +32,8 @@ while True:
 
     ergebnis = taschenrechner(zahl1, zahl2, op)
     print("Ergebnis:", ergebnis)
-
-    weiter = input("Willst du weiter machen?: ")
+    frage = input("Willst du weiter machen?: ")
         
-    if weiter == "ja".lower:
-        input(op)
-        input(zahl2)
-    elif weiter == "nein".lower:
-        continue
-
-    
+    if frage != "ja":
+        weiter=False 
+       
