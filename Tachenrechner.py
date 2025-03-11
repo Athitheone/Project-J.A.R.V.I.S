@@ -32,3 +32,8 @@ while True:
 
     ergebnis = taschenrechner(zahl1, zahl2, op)
     print("Ergebnis:", ergebnis)
+
+    input("Willst du weiter machen?: ")
+
+    if 
+
