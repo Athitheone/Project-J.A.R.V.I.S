@@ -16,15 +16,19 @@ def taschenrechner(a, b, operation):
     else:
         return "Ungültige Operation!"
 weiter= True
+ergebnis = 0
 while weiter:
     op = input("Welche Operation möchtest du ausführen? (+, -, *, / ,** ,%) oder exit:")
     if op.lower() == 'exit':
         print('Code wird beendet!')
         break
     try:
-        # Testen der Funktion
-        zahl1 = float(input("Gib die erste Zahl ein: "))
-        zahl2 = float(input("Gib die zweite Zahl ein: "))
+        if ergebnis == 0:
+                    zahl1 = float(input("Gib die erste Zahl ein: "))
+                    zahl2 = float(input("Gib die zweite Zahl ein: "))
+        else:
+            zahl1 = ergebnis
+            zahl2 = float(input("Gib die zweite Zahl ein: "))
     except ValueError:
         print("Erneut versuchen!")
         continue
@@ -32,12 +36,11 @@ while weiter:
 
     ergebnis = taschenrechner(zahl1, zahl2, op)
     print("Ergebnis:", ergebnis)
-    frage = input("Willst du weiter machen?: ")
-        
-    if frage != "ja":
-        weiter=False 
+    frage = input("Willst du weiter machen? (ja/nein): ").lower()
     
-    mach = input('Mit dem gleichen Wert?')
-while True:
-    if mach == 'ja'.lower:
-        ergebnis + op + zahl2
+    if frage != 'ja'.lower():
+        weiter = False  
+    else:
+        frage2 = input('Mit demselben Wert? (ja/nein): ')
+    if frage2 != 'ja'.lower():
+        ergebnis = 0
