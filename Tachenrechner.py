@@ -36,4 +36,8 @@ while weiter:
         
     if frage != "ja":
         weiter=False 
-       
+    
+    mach = input('Mit dem gleichen Wert?')
+while True:
+    if mach == 'ja'.lower:
+        ergebnis + op + zahl2
