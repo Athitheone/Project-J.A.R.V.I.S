@@ -1,0 +1,85 @@
+
+    <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mein erstes JavaScript</title>
+</head>
+<body>
+
+    <h1>Willkommen zu JavaScript!</h1>
+    <p>Right klick Untersuchen und dann Console Öffnen</p>
+    <button onclick="zeigeNachricht()">Klicke mich!</button>
+    <buttonon onclick="revealNachricht()"></button>
+    <p class ="hidden">Hallo!</p>
+    <script>
+        //Java-script Code
+
+        let name = "Max";
+        console.log(name);
+
+        function begruesserung(name){
+            return "Hallo" + name + "!"
+        }
+
+        let ergebnis = begruesserung("Max")
+        console.log(ergebnis);
+
+        let zahl = 5;
+
+        if (zahl > 10) {
+            console.log("Zahl ist größer als 10");
+        } else{
+            console.log("Zahl kleiner als 10");
+        }
+
+        //for Schleife
+        for (let i = 0; i<5; i++) {
+            console.log(i);
+        }
+
+        // while-Schleife
+        let j = 0;
+        while (j < 5) {
+        console.log(j); // Ausgabe: 0, 1, 2, 3, 4
+        j++;
+       }
+        
+       function addieren(a, b) {
+        return a + b;
+       }
+
+       let ergebniss = addieren(3, 4);
+       console.log(ergebniss);
+
+       function zeigeNachricht() {
+        alert ("Der Button wurde geklickt!");
+       }
+
+       function revealNachricht() {
+        
+        }
+       
+    </script>
+    <style>
+
+        button{
+            border-color: green;
+            border-style: dashed;
+            color: violet;
+            display: inline-block;
+            font-size: larger;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        button:hover{
+            transition: 1s;
+            color: rgb(35, 219, 81);
+            background-color: black;
+            border-radius: 8px;
+        }
+
+        .hidden{
+            color: white;
+        }
+    </style>
